@@ -15,15 +15,21 @@ class Solution2 {
 		String s = String.valueOf(n);
 		//string의 값들을 하나씩 떨어뜨리는 방법은 2가지
 		//1)char로 분리
+		int answer= 0;
+		//int answer3 = 0;
 		char[] c = s.toCharArray();
+		for (int i = 0; i < c.length; i++) {
+			answer += c[i] - 48;
+			//answer3 += c[i] - '0';
+		}
 		//2)string로 분리
 		String[] s2 = s.split("");
 		//하나씩 꺼내서 int로 변경후 ,더해주자.
-		int answer = 0;
-		for (int i = 0; i < s2.length; i++) {
-			int x = Integer.parseInt(s2[i]);
-			answer = answer+x;
-		}
+		//int answer = 0;
+		//for (int i = 0; i < s2.length; i++) {
+		//	int x = Integer.parseInt(s2[i]);
+		//	answer = answer+x;
+		//}
 		return answer;
 	}
 }
